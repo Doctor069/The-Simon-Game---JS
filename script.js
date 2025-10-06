@@ -39,10 +39,15 @@ function nextRound() {
   
   gameSequence.push(randomButton.id);
 
-  setTimeout(function() {
-      buttonAnimation(randomButton.id);
-      MakeSoundByButton(randomButton.id);
-  }, 500);
+  for (let i = 0; i < gameSequence.length; i++) {
+    var color = gameSequence[i]; 
+    var delay = 600;
+
+    setTimeout(function() {
+      buttonAnimation(color);
+      MakeSoundByButton(color);
+    }, delay * (i + 1)); 
+  }
 }
 
 function checkAnswer(currentLevel) {
