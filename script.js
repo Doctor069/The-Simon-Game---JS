@@ -56,7 +56,7 @@ function checkAnswer(currentLevel) {
     var wrongSound = new Audio("./sounds/wrong.mp3");
     wrongSound.play();
     
-    document.querySelector("#level-title").innerHTML = "Game Over, Press Any Key to Restart";
+    document.querySelector("#level-title").innerHTML = "Game Over, Pressione QUALQUER Tecla do Teclado para Resertar.";
     
     document.querySelector("body").style.backgroundColor = "red";
 
