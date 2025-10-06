@@ -40,8 +40,8 @@ function nextRound() {
   gameSequence.push(randomButton.id);
 
   for (let i = 0; i < gameSequence.length; i++) {
-    var color = gameSequence[i]; 
-    var delay = 600;
+    const color = gameSequence[i]; 
+    const delay = 600;
 
     setTimeout(function() {
       buttonAnimation(color);
@@ -80,26 +80,8 @@ function resetGame() {
 }
 
 function MakeSoundByButton(key) {
-  switch (key) {
-    case "green":
-      var som = new Audio("./sounds/green.mp3");
-      som.play();
-      break;
-    case "red":
-      var som = new Audio("./sounds/red.mp3");
-      som.play();
-      break;
-    case "blue":
-      var som = new Audio("./sounds/blue.mp3");
-      som.play();
-      break;
-    case "yellow":
-      var som = new Audio("./sounds/yellow.mp3");
-      som.play();
-      break;
-    default:
-      console.log("Botão não reconhecido: " + key);
-  }
+  var som = new Audio("./sounds/" + key + ".mp3");
+  som.play();
 }
 
 function buttonAnimation(currentKey) {
